@@ -13,7 +13,7 @@ const app = express();
 
 app .use(express.json ())
 
-app post('/user', (req, res) =>{
+app.post('/user', (req, res) =>{
 
 const newUser = new User (... req. body});
 
@@ -52,7 +52,7 @@ if (user) {
 res. status (404). send('user not found)')
 }). catch ((err)=>{
 
-res status (500). send('Internal Server Error!');
+res.status (500). send('Internal Server Error!');
 
 });
 })
@@ -78,5 +78,3 @@ app .listen (port, ()=>{
   console. log('User service running on port ${port}');
 
 })
-
-Run user service at port 5000
