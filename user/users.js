@@ -15,7 +15,7 @@ app .use(express.json ())
 
 app.post('/user', (req, res) =>{
 
-const newUser = new User (... req. body});
+const newUser = new User(...req.body});
 
 newUser. save (). then (() =>{
 
