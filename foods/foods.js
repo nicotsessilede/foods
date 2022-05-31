@@ -52,13 +52,14 @@ app.get('/food/: id', (req. res) =>{
      } else {
 
 res.status (404).send('Food not found ');
-}). catch ((err) =>{ res status .(500).send( 'Internal Server Error!');
+}).catch ((err) =>{
+  res.status.(500).send( 'Internal Server Error!');
 
 });
 
-app. delete('/food/:id', (req, res) => {
+app.delete('/food/:id', (req, res) => {
 
-Food.findOneAndRemove(req. params. id). then ((food) => {
+Food.findOneAndRemove(req.params. id). then ((food) => {
 
 if (food){
 
@@ -66,12 +67,12 @@ res.json ('Food deleted Successfully!'')
 
 } else {
 
-res .status (404).send('Food not found ');
+res.status (404).send('Food not found ');
 
-} }).catch ((err) => {
-  res.status (500).send('Internal Server Error!');
+} }).catch((err) => {
+  res.status(500).send('Internal Server Error!');
 });
 });
-app listen (port, () {
+app.listen(port, () {
   console.log('Food service ready on port: ${port} ');
 })
