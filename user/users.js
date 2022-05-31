@@ -65,7 +65,7 @@ User.findByIdAndRemove(req. params. id). then ((user) =>{
 
 } else {
 
-res. status (404). send('User Not Found!");
+res. status (404). send('User Not Found!'');
 }
 }).catch ((err)=>{
   res .status (500).send('Internal Server Error!');
