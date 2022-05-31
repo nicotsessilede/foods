@@ -27,41 +27,35 @@ res. send('New user created Successfully!');
 
 app.get('/user/:id', (req, res) =>
 
-User, find (), then ((user)->{
+User.findByID(). then ((user)=>{
 
-if (user){ res.json (user)
+if (user){
+  res.json (user)
 
-}else ( res status (404).send('user not found); } }).catch ((err)=>{
+}else ( res.status (404).send('user not found');
+}
+}).catch ((err)=>{
 
-res status (500).send( Internal Server Error!');
+res .status (500).send( 'Internal Server Error!');
 
-}):
-
-})
-
-Microservice-based architectures
-
-Hands-on: creating the user service
-
-app.get('/user/:id (req, res) =>{
-
-User. FindByld (req params, id). then ((user) =>{ }else{
-
-if (user) { res json (user);
-
-res. status (404). send('user not found):) }
-
-1). catch ((err)->{
-
-1):
-
-res status (500). send("Internal Server Error!"):
+});
 
 })
 
-81/96
+app.get('/user/:id' ,(req, res) =>{
 
-Microservice-based architectures Hands-on: creating the user service
+User. FindById (req .params, id). then ((user) =>{
+
+if (user) {
+  res. json (user);
+}else{
+res. status (404). send('user not found)')
+}). catch ((err)=>{
+
+res status (500). send('Internal Server Error!');
+
+});
+})
 
 app. delete(/user/:id (req, res)->
 
